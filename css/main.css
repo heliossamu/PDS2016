@@ -1,0 +1,130 @@
+
+body{
+	margin: 0 auto;
+	height: 100%;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+.menu{
+	padding: 0.2%;
+	width: 100%;
+	border-bottom: 1.4px solid #eee;
+}
+
+.menu ul{
+	vertical-align: middle;
+    margin: 0px;
+    padding: 0.6%;
+}
+
+.menu ul li{
+    display: inline-block;
+    color: black;
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.menu div{
+	padding: 0.6%;
+	display: inline-block;
+}
+
+#logo-div{
+	padding: 0px;
+	vertical-align: middle;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#logo-div img{
+	width: 140px;
+	height: 42px;
+
+}
+
+
+#find-medicine-div{
+	margin-left: 0.4%;
+}
+
+#find-medicine-div input[type="text"]{
+	width: 400px;
+	padding: 1%;
+	height: 27px;
+	padding-left: 2%;
+	padding-right: 2%;
+	font-size: 15px;
+	border-left: 1px solid #bfbfbf;
+	border-top: 1px solid #bfbfbf;
+	border-bottom: 1px solid #bfbfbf;
+}
+
+#find-medicine-div button{
+	border: 1px solid #bfbfbf;
+	background-color: #f2f2f2;
+	padding-left: 20px;
+	padding-right: 20px;
+	transform:translate(-3px, -2px); 
+}
+
+#find-medicine-div button img{
+	padding: 1.6px;
+	vertical-align: middle;
+	opacity: 0.6;
+	width: 20px;
+	height: 20px;
+}
+
+#user-info{
+	transform:translate(-26px, 3px); 
+	float: right;
+	border: 1px solid #bfbfbf;
+	border-radius: 20px;
+	vertical-align: middle;
+	padding: 0.2%;
+	padding-left: 1.4%;
+	padding-right: 1.4%;
+	font-size: 14px;
+}
+
+#user-info img{
+	border-radius: 3px;
+	vertical-align: middle;
+	width: 30px;
+	height: 30px;
+	margin-right: 4px;
+}
+
+.main-div{
+	width: 100%;
+	background-color: #FAFAFA;
+}
+
+.friend-list, .map{
+	display: inline-block;
+	height: 94%;
+}
+
+.friend-list{
+	background-color: green;
+	width: 20%;
+}
+
+.map{
+	background-color: #F5F5F5;
+	width: 80%;
+}
+
+#map-area{
+	background-color: white;
+	border: 1.4px solid #eee;
+	margin: 2%;
+	margin-top: 0.6%;
+	height: 97%;
+}

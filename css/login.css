@@ -1,0 +1,68 @@
+
+body{
+	margin: 0 auto;	
+	background-color: #eaeae1;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.login-aux-div{
+	width: 100%;
+}
+
+.login-div{
+	text-align: center;
+	background-color: white;
+	height: 300px;
+	position: relative;
+	top: 50%;
+	transform: translate(0,50%);
+	width: 30%;
+	margin: 0 auto;
+	border-radius: 6px;
+	border: 1px solid #d5d5c3;
+}
+
+#logo-img{
+	margin-top: 50px;
+	width: 70px;
+	height: 70px;
+
+}
+
+#welcome-info{
+	margin-top: 12px;
+	font-size: 17px;
+}
+
+#face-button{
+	padding-top: 4px;
+	margin-top: 30px;
+	margin-left: 16%;
+	margin-right: 16%;
+	border-radius: 6px;
+	border: 1.6px solid #eee;
+	cursor: pointer;
+}
+
+#face-button:hover{
+	background-color: #e6e6e6;
+}
+
+#face-img{
+	background-image: url('../images/facebook-icon.png');
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+}
+
+#face-txt{
+	display: inline-block;
+	font-size: 18px;
+	margin-left: 10px;
+	transform: translate(0, -18px);
+}
+
+#credits{
+	margin-top: 30px;
+	font-size: 13px;
+}
