@@ -51,16 +51,16 @@
 			<div class="login-div">
 				<img id="logo-img" src="images/user.png"></img>
 
-				<div id="welcome-info">Welcome to GetMedicine App!<div>
+				<div id="welcome-info">Bem vindo ao GetMedicine!<div>
 
 				<?php
 					echo "<div id='face-button' onclick=\"window.location='" . htmlspecialchars($loginUrl) . "'\">"
 				?>
 					<div id="face-img"></div><!--
-					--><div id="face-txt">Login with Facebook</div>
+					--><div id="face-txt">Fazer login com o Facebook</div>
 				</div>
 
-				<div id="credits">Developed by Compattic Software</div>
+				<div id="credits">Devenvolvido pela Compattic Software</div>
 			</div>
 		</div>
 
