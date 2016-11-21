@@ -41,16 +41,30 @@
 		</script>
 
 		<?php
-			echo "ue?";
-			use facebook\Helpers\FacebookRedirectLoginHelper;
-			//use facebook\Exceptions\FacebookSDKException;
-
 			$fb = new Facebook\Facebook([
 				'app_id' => '339187369764704',
 				'app_secret' => 'cc622d04da31a557d12c0786ee3d0fba',
 				'default_graph_version' => 'v2.2',
 			]);
 
+			$helper = $fb->getRedirectLoginHelper();
+			try {
+			  $accessToken = $helper->getAccessToken();
+			} catch(Facebook\Exceptions\FacebookResponseException $e) {
+			  // When Graph returns an error
+			  echo 'Graph returned an error: ' . $e->getMessage();
+			  exit;
+			} catch(Facebook\Exceptions\FacebookSDKException $e) {
+			  // When validation fails or other local issues
+			  echo 'Facebook SDK returned an error: ' . $e->getMessage();
+			  exit;
+			}
+
+			echo "ue?";
+			/*
+			
+			use facebook\Helpers\FacebookRedirectLoginHelper;
+			//use facebook\Exceptions\FacebookSDKException;
 
 			$helper = new FacebookRedirectLoginHelper('https://getmedicine.herokuapp.com/index.php', '339187369764704', 'cc622d04da31a557d12c0786ee3d0fba');
 
@@ -70,7 +84,7 @@
 			}else{
 				echo "nao consegui o session";
 			}
-
+			*/
 			
 			/*
 			// Send the request to Graph
