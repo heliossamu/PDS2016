@@ -15,9 +15,10 @@
 	</head>
 	<body>
 		<?php 
-			require_once __DIR__ . '/facebook/autoload.php';
+			require('facebook/autoload.php');
+			//require_once __DIR__ . '/facebook/autoload.php';
+			//require_once __DIR__ . '/vendor/autoload.php';
 			require("vendor/autoload.php");
-			require("facebook/Helpers/FacebookRedirectLoginHelper");
 			session_start();
 		?>
 
@@ -42,7 +43,7 @@
 		<?php
 			echo "ue?";
 			//use facebook\Helpers\FacebookRedirectLoginHelper;
-			use facebook\Exceptions\FacebookSDKException;
+			//use facebook\Exceptions\FacebookSDKException;
 
 			$fb = new Facebook\Facebook([
 				'app_id' => '339187369764704',
