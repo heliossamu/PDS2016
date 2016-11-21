@@ -42,7 +42,7 @@
 
 		<?php
 			echo "ue?";
-			//use facebook\Helpers\FacebookRedirectLoginHelper;
+			use facebook\Helpers\FacebookRedirectLoginHelper;
 			//use facebook\Exceptions\FacebookSDKException;
 
 			$fb = new Facebook\Facebook([
