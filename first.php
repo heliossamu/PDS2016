@@ -77,6 +77,7 @@
 
 				$user = $response->getGraphUser();
 				echo 'Name: ' . $user['name'];
+				echo 'Id: ' . $user['id'];
 			}
 
 			/*
