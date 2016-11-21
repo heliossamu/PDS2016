@@ -9,6 +9,7 @@
 	<body>
 		<?php 
 			require_once __DIR__ . '/facebook/autoload.php';
+			require("vendor/autoload.php");
 			session_start();
 		?>
 
