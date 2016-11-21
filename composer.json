@@ -1,13 +1,11 @@
 {
-  "require" : {
-    "silex/silex": "^1.3",
-    "monolog/monolog": "^1.4",
-    "twig/twig": "^1.8",
-    "symfony/twig-bridge": "^2",
-    "ext-mbstring": "*",
-    "mbstring": "*"
-  },
-  "require-dev": {
-    "heroku/heroku-buildpack-php": "*"
-  }
+    "require": {
+        "silex/silex": "^2.0",
+        "ext-mbstring": "^0.0.0",
+        "phpunit/phpunit": "^4.8",
+        "facebook/graph-sdk": "^5.4",
+        "paragonie/random_compat": "^2.0",
+        "guzzlehttp/guzzle": "^6.2",
+        "mockery/mockery": "^0.9.6"
+    }
 }
