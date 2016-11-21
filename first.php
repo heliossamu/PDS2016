@@ -17,6 +17,7 @@
 		<?php 
 			require_once __DIR__ . '/facebook/autoload.php';
 			require("vendor/autoload.php");
+			require("facebook/Helpers/FacebookRedirectLoginHelper");
 			session_start();
 		?>
 
@@ -40,7 +41,7 @@
 
 		<?php
 			echo "ue?";
-			use facebook\Helpers\FacebookRedirectLoginHelper;
+			//use facebook\Helpers\FacebookRedirectLoginHelper;
 			use facebook\Exceptions\FacebookSDKException;
 
 			$fb = new Facebook\Facebook([
