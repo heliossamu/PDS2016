@@ -15,8 +15,7 @@
 	</head>
 	<body>
 		<?php 
-			require('facebook/autoload.php');
-			//require_once __DIR__ . '/facebook/autoload.php';
+			require_once __DIR__ . '/facebook/autoload.php';
 			//require_once __DIR__ . '/vendor/autoload.php';
 			require("vendor/autoload.php");
 			session_start();
@@ -52,11 +51,11 @@
 			]);
 
 
-			$helper = new FacebookRedirectLoginHelper('https://getmedicine.herokuapp.com/index.php', '339187369764704', 'cc622d04da31a557d12c0786ee3d0fba');
+			$helper = new Facebook\FacebookRedirectLoginHelper('https://getmedicine.herokuapp.com/index.php', '339187369764704', 'cc622d04da31a557d12c0786ee3d0fba');
 
 			try {
 			    $session = $helper->getSessionFromRedirect();
-			} catch(FacebookSDKException $e) {
+			} catch(Facebook\FacebookSDKException $e) {
 			    $session = null;
 			}
 
