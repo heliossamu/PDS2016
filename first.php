@@ -35,18 +35,53 @@
 		     js.src = "//connect.facebook.net/en_US/sdk.js";
 		     fjs.parentNode.insertBefore(js, fjs);
 		   }(document, 'script', 'facebook-jssdk'));
-
-		  	FB.getLoginStatus(function(response) {
-			  if (response.status === 'connected') {
-			    var accessToken = response.authResponse.accessToken;
-			  } 
-			} );
-
-
 		</script>
 
 		<?php
+			use Facebook\FacebookRedirectLoginHelper;
+			use Facebook\FacebookSDKException;
+
+			$fb = new Facebook\Facebook([
+				'app_id' => '339187369764704',
+				'app_secret' => 'cc622d04da31a557d12c0786ee3d0fba',
+				'default_graph_version' => 'v2.2',
+			]);
+
+
+			$helper = new FacebookRedirectLoginHelper('https://getmedicine.herokuapp.com/index.php', '339187369764704', 'cc622d04da31a557d12c0786ee3d0fba');
+
+			try {
+			    $session = $helper->getSessionFromRedirect();
+			} catch(FacebookSDKException $e) {
+			    $session = null;
+			}
+
+
+			if($session){
+				$accessToken = $session->getAccessToken();
+				$longLivedAccessToken = $accessToken->extend();
+
+				echo "long lived: " . $longLivedAccessToken;
+
+			}
+
 			
+			/*
+			// Send the request to Graph
+			try {
+			  $response = $fb->get('/me');
+			} catch(Facebook\Exceptions\FacebookResponseException $e) {
+			  // When Graph returns an error
+			  echo 'Graph returned an error: ' . $e->getMessage();
+			  exit;
+			} catch(Facebook\Exceptions\FacebookSDKException $e) {
+			  // When validation fails or other local issues
+			  echo 'Facebook SDK returned an error: ' . $e->getMessage();
+			  exit;
+			}
+
+			var_dump($response);
+			*/
 		?>
 
 
