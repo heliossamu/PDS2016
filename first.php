@@ -38,6 +38,7 @@
 		</script>
 
 		<?php
+			echo "ue?";
 			use Facebook\FacebookRedirectLoginHelper;
 			use Facebook\FacebookSDKException;
 
