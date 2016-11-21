@@ -63,6 +63,8 @@
 
 				echo "long lived: " . $longLivedAccessToken;
 
+			}else{
+				echo "nao consegui o session";
 			}
 
 			
