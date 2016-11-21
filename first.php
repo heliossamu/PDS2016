@@ -40,8 +40,8 @@
 
 		<?php
 			echo "ue?";
-			use Facebook\FacebookRedirectLoginHelper;
-			use Facebook\FacebookSDKException;
+			use facebook\Helpers\FacebookRedirectLoginHelper;
+			use facebook\Exceptions\FacebookSDKException;
 
 			$fb = new Facebook\Facebook([
 				'app_id' => '339187369764704',
