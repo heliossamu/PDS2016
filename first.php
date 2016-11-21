@@ -47,6 +47,9 @@
 				'default_graph_version' => 'v2.2',
 			]);
 
+			$user = $fb->getUser();
+			echo $user;
+
 			$helper = $fb->getRedirectLoginHelper();
 			try {
 			  $accessToken = $helper->getAccessToken();
@@ -60,7 +63,13 @@
 			  exit;
 			}
 
-			echo "ue?";
+			if (isset($accessToken)) {
+			  	// Logged in!
+			  	$_SESSION['facebook_access_token'] = (string) $accessToken;
+
+
+			}
+
 			/*
 			
 			use facebook\Helpers\FacebookRedirectLoginHelper;
