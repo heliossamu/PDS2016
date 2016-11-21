@@ -52,7 +52,7 @@
 			]);
 
 
-			$helper = new Facebook\FacebookRedirectLoginHelper('https://getmedicine.herokuapp.com/index.php', '339187369764704', 'cc622d04da31a557d12c0786ee3d0fba');
+			$helper = new FacebookRedirectLoginHelper('https://getmedicine.herokuapp.com/index.php', '339187369764704', 'cc622d04da31a557d12c0786ee3d0fba');
 
 			try {
 			    $session = $helper->getSessionFromRedirect();
