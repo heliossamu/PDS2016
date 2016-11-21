@@ -1,0 +1,113 @@
+body{
+	margin: 0 auto;
+	background-color: #eaeae1;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+.menu{
+	padding: 0.2%;
+	width: 100%;
+	background-color: white;
+	border-bottom: 1.4px solid #eee;
+}
+
+.menu ul{
+	vertical-align: middle;
+    margin: 0px;
+    padding: 0.6%;
+}
+
+.menu ul li{
+    display: inline-block;
+    color: black;
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.menu div{
+	padding: 0.6%;
+	display: inline-block;
+}
+
+#logo-div{
+	padding: 0px;
+	vertical-align: middle;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#logo-div img{
+	width: 140px;
+	height: 42px;
+}
+
+#endereco-div{
+	border: 1px solid #d5c5c3;
+	background-color: white;
+	width: 60%;
+	border-radius: 6px;	
+	margin-left: 20%;
+	margin-top: 100px;
+}
+
+#endereco-left{
+	display: inline-block;
+	
+	width: 20%;
+	text-align: center;
+	vertical-align: middle;
+    
+}
+
+#endereco-left img{
+	width: 100px;
+	height: 100px;	
+	opacity: 0.5;
+	
+	transform: translate(10px, -50px);
+}
+
+#endereco-right{
+	padding-left: 1%;
+	padding-right: 1%;
+	display: inline-block;
+	width: 78%;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+
+#endereco-right h3{
+	text-align: center;
+}
+
+#endereco-right p{
+	font-size: 18px;
+}
+
+#endereco-right input[type="text"]{
+	font-family: 'Roboto Condensed', sans-serif;
+	padding: 6px;
+	width: 100%;
+	font-size: 18px;
+}
+
+#confirmar{
+	background-color: white;
+	cursor: hand;
+	width: 20%;
+	text-align: center;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	float: right;
+	font-size: 18px;
+	border-radius: 6px;
+	border: 1px solid #d5c5c3;
+}
