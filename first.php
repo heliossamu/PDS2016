@@ -61,8 +61,8 @@
 				$accessToken = $session->getAccessToken();
 				$longLivedAccessToken = $accessToken->extend();
 
-				echo "long lived: " . $longLivedAccessToken;
-
+				//echo "long lived: " . $longLivedAccessToken;
+				echo 'test';
 			}else{
 				echo "nao consegui o session";
 			}
