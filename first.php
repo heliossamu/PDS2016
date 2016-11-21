@@ -16,6 +16,7 @@
 	<body>
 		<?php 
 			require_once __DIR__ . '/facebook/autoload.php';
+			require_once( 'facebook/Helpers/FacebookRedirectLoginHelper.php' );
 			//require_once __DIR__ . '/vendor/autoload.php';
 			require("vendor/autoload.php");
 			session_start();
