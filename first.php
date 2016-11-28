@@ -77,7 +77,9 @@
 
 				$user = $response->getGraphUser();
 				echo 'Name: ' . $user['name'];
-				echo 'Id: ' . $user['id'];
+
+				$facebookid = $user['id']; //importante!! será usado no js/first.js
+				echo $facebookid;
 			}
 
 			/*

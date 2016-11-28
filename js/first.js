@@ -4,6 +4,8 @@
 //carrega o autocomplete do input de endereco.
 function initialize(){
 
+	
+	
 	checkFacebookId(1);
 
 	var input = (document.getElementById('endereco'));
@@ -31,8 +33,6 @@ function checkFacebookId(facebookid){
 	        //alert(thrownError);
       	}
 	});
-
-
 }
 
 //funcao que trata o evento de clickar no botao confirmar da pagina first.php
@@ -43,8 +43,27 @@ function confirmButton(){
 	}else{
 		//inserir dados na tabela Pessoa
 
+
 		//redirecionar para a home.php
 
 		alert("ok");
 	}
+}
+
+function insertPerson(){
+	var ajax = $.ajax({
+		url: 'action/cadastrarPessoaAction.php',
+		type: 'POST',
+		async: true,
+		data: {fbid: facebookid, coordx: coordx, coordy: coordy},
+		success: function (data) {
+        	alert(data);
+    	},
+
+		error: function (xhr, ajaxOptions, thrownError) {
+	        //alert(xhr.status);
+	        //alert(thrownError);
+      	}
+	});	
+
 }
