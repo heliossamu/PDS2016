@@ -49,7 +49,8 @@ function confirmButton(){
 	if(!address || address.length == 0){
 		alert("Informe um endereco!");
 	}else{
-
+		alert(lat);
+		alert(lng);
 
 		//inserir dados na tabela Pessoa
 
