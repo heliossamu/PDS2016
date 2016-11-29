@@ -49,19 +49,19 @@ function confirmButton(){
 	if(!address || address.length == 0){
 		alert("Informe um endereco!");
 	}else{
-		alert(lat);
-		alert(lng);
+		
 
 		//inserir dados na tabela Pessoa
 		insertPerson();
 
 		//redirecionar para a home.php
 
-		alert("ok");
+		//alert("ok");
 	}
 }
 
 function insertPerson(){
+	alert("insert");
 	var ajax = $.ajax({
 		url: 'action/cadastrarPessoaAction.php',
 		type: 'POST',
@@ -72,8 +72,8 @@ function insertPerson(){
     	},
 
 		error: function (xhr, ajaxOptions, thrownError) {
-	        //alert(xhr.status);
-	        //alert(thrownError);
+	        alert("error: " . xhr);
+	        
       	}
 	});	
 
