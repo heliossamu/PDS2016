@@ -12,7 +12,7 @@
 	if (!$result) {
     	//die('Invalid query: ' . mysql_error());
 	}else{
-		while ($row = mysql_fetch_assoc($result)) {
+		while ($row = pg_fetch_array($result)) {
 			$quant = $row['quant'];
 		}
 	}
