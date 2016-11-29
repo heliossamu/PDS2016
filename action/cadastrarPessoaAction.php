@@ -7,20 +7,20 @@
 
 	  Este módulo pertence à página first.php
 	*/
-	$coordx = $_POST['coordx'];
-	$coordy = $_POST['coordy'];
-	$facebookid = $_POST['fbid'];
+	$lat = $_POST['lat'];
+	$lng = $_POST['lng'];
+	$facebookid = $_POST['facebookid'];
 	
 	//query para contar a qtde de tuplas com o id recebido
-	$query = "INSERT INTO pessoa(facebookid, coordx, coordy) VALUES(". $facebookid .", 
-		".$coordx.", ".$coordy.")";
+	$query = "INSERT INTO pessoa(facebookid, lat, lng) VALUES(". $facebookid .", 
+		".$lat.", ".$lng.")";
 	
-	$result = mysql_query($query);
+	$result = pg_query($conexao, $query);
 	/* Retorna 1 em caso de sucesso ou 0, caso contrário*/
 	if (!$result){
     	echo "0";
 	}else{
 		echo "1";
 	}
-	mysql_close($conexao);
+	pg_close($conexao);
 ?>
