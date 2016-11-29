@@ -2,7 +2,7 @@
 	include '../conexao.php';
 
 	//pego o id passado pela funcao 'checkFacebookid' de 'first.js'
-	$facebookid = $_POST['fbid'];
+	$facebookid = $_POST['facebookid'];
 	$quant = 0;
 	
 	//query para contar a qtde de tuplas com o id recebido
