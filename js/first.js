@@ -34,10 +34,8 @@ function checkFacebookId(){
 		async: true,
 		data: {facebookid: facebookid},
 		success: function (data) {
-        	alert('quant' + data);
-
         	if(data > 0){
-        		$(location).attr('href', 'http://stackoverflow.com')
+        		$(location).attr('href', '../teste.php')
         	}
     	},
 
