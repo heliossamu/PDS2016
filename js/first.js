@@ -1,11 +1,12 @@
 
 var lat;
 var lng;
-
+var facebookid;
 
 //esta funcao sempre é chamada durante a inicializacao da pagina
 //carrega o autocomplete do input de endereco.
 function initialize(){
+	facebookid = $("#facebookid").val();
 
 	//checkFacebookId(1);
 
@@ -31,7 +32,7 @@ function checkFacebookId(facebookid){
 		url: 'action/verificaPessoaAction.php',
 		type: 'POST',
 		async: true,
-		data: {fbid: facebookid},
+		data: {facebookid: facebookid},
 		success: function (data) {
         	alert(data);
     	},
@@ -66,7 +67,7 @@ function insertPerson(){
 		url: 'action/cadastrarPessoaAction.php',
 		type: 'POST',
 		async: true,
-		data: {fbid: facebookid, lat: lat, lng: lng},
+		data: {facebookid: facebookid, lat: lat, lng: lng},
 		success: function (data) {
         	alert(data);
     	},
