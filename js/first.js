@@ -35,6 +35,10 @@ function checkFacebookId(){
 		data: {facebookid: facebookid},
 		success: function (data) {
         	alert('quant' + data);
+
+        	if(data > 0){
+        		$(location).attr('href', 'http://stackoverflow.com')
+        	}
     	},
 
 		error: function (xhr, ajaxOptions, thrownError) {
