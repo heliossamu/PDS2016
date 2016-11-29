@@ -66,7 +66,7 @@ function insertPerson(){
 		url: 'action/cadastrarPessoaAction.php',
 		type: 'POST',
 		async: true,
-		data: {fbid: facebookid, coordx: coordx, coordy: coordy},
+		data: {fbid: facebookid, lat: lat, lng: lng},
 		success: function (data) {
         	alert(data);
     	},
