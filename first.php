@@ -83,51 +83,9 @@
 
 				echo "<input type='hidden' id='facebookid' name='facebookid' value='".$facebookid."'>";
 			}
-
-			/*
-			
-			use facebook\Helpers\FacebookRedirectLoginHelper;
-			//use facebook\Exceptions\FacebookSDKException;
-
-			$helper = new FacebookRedirectLoginHelper('https://getmedicine.herokuapp.com/index.php', '339187369764704', 'cc622d04da31a557d12c0786ee3d0fba');
-
-			try {
-			    $session = $helper->getSessionFromRedirect();
-			} catch(Facebook\FacebookSDKException $e) {
-			    $session = null;
-			}
-
-
-			if($session){
-				$accessToken = $session->getAccessToken();
-				$longLivedAccessToken = $accessToken->extend();
-
-				//echo "long lived: " . $longLivedAccessToken;
-				echo 'test';
-			}else{
-				echo "nao consegui o session";
-			}
-			*/
-			
-			/*
-			// Send the request to Graph
-			try {
-			  $response = $fb->get('/me');
-			} catch(Facebook\Exceptions\FacebookResponseException $e) {
-			  // When Graph returns an error
-			  echo 'Graph returned an error: ' . $e->getMessage();
-			  exit;
-			} catch(Facebook\Exceptions\FacebookSDKException $e) {
-			  // When validation fails or other local issues
-			  echo 'Facebook SDK returned an error: ' . $e->getMessage();
-			  exit;
-			}
-
-			var_dump($response);
-			*/
 		?>
 
-
+		<script src="js/first.js"></script>
 		
 		<div class="menu">
 			<div id="logo-div">
@@ -161,7 +119,7 @@
 		<!-- Maps API Javascript -->
         <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDJY_wjIELj_UP7FULQdkEsrRFsuoPipdI&sensor=false&libraries=places"></script>
         
-        <script src="js/first.js"></script>
+        
 
 	</body>
 </html>
