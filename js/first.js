@@ -53,7 +53,7 @@ function confirmButton(){
 		alert(lng);
 
 		//inserir dados na tabela Pessoa
-
+		insertPerson();
 
 		//redirecionar para a home.php
 
