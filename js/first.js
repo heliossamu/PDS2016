@@ -35,7 +35,7 @@ function checkFacebookId(){
 		data: {facebookid: facebookid},
 		success: function (data) {
         	if(data > 0){
-        		$(location).attr('href', '../teste.php')
+        		$(location).attr('href', '../home.php')
         	}
     	},
 
