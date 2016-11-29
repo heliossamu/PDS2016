@@ -9,8 +9,8 @@ use getmedicine;
 create table pessoa (
     pessoaid serial primary key,
     facebookid varchar(100),
-    lat int,
-    lng int
+    lat float,
+    lng float
 );
 
 

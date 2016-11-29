@@ -7,8 +7,8 @@ var facebookid;
 //carrega o autocomplete do input de endereco.
 function initialize(){
 	facebookid = $("#facebookid").val();
-
-	//checkFacebookId(1);
+	
+	checkFacebookId();
 
 	var input = (document.getElementById('endereco'));
 	var autocomplete = new google.maps.places.Autocomplete(input);
@@ -25,7 +25,7 @@ function initialize(){
 initialize();
 
 //verifica se ja existe um cadastro na tabela Pessoa com o facebookid informado
-function checkFacebookId(facebookid){
+function checkFacebookId(){
 	//fazer uma query para contar o numero de cadastros com o facebookid informado
 	//deve retornar 0 se nao existir ou 1, caso contrario. (nao da pra ter mais de 1 cadastro com o mesmo facebookid)
 	var ajax = $.ajax({
@@ -34,7 +34,7 @@ function checkFacebookId(facebookid){
 		async: true,
 		data: {facebookid: facebookid},
 		success: function (data) {
-        	alert(data);
+        	alert('quant' + data);
     	},
 
 		error: function (xhr, ajaxOptions, thrownError) {
