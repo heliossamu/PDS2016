@@ -52,31 +52,25 @@ function confirmButton(){
 	if(!address || address.length == 0){
 		alert("Informe um endereco!");
 	}else{
-		
-
 		//inserir dados na tabela Pessoa
 		insertPerson();
 
-		//redirecionar para a home.php
-
-		//alert("ok");
 	}
 }
 
 function insertPerson(){
-	alert("insert");
 	var ajax = $.ajax({
 		url: 'action/cadastrarPessoaAction.php',
 		type: 'POST',
 		async: true,
 		data: {facebookid: facebookid, lat: lat, lng: lng},
 		success: function (data) {
-        	alert(data);
+			//redireciona para a home
+        	$(location).attr('href', '../home.php')
     	},
 
 		error: function (xhr, ajaxOptions, thrownError) {
 	        alert("error: " . xhr);
-	        
       	}
 	});	
 
