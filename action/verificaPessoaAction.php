@@ -6,7 +6,7 @@
 	$quant = 0;
 	
 	//query para contar a qtde de tuplas com o id recebido
-	$query = "SELECT COUNT(pessoaid) AS quant FROM Pessoa WHERE facebookid = " . $facebookid;
+	$query = "SELECT COUNT(pessoaid) AS quant FROM Pessoa WHERE facebookid = '" . $facebookid . "';";
 	
 	$result = pg_query($conexao, $query);
 	if (!$result) {
