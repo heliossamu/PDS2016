@@ -24,6 +24,8 @@ function addMedicine(lat, lng){
 function initialize(){
     //carrego as coordenadas cadastradas na tabela pessoa
     getLatLng();
+    alert(lat);
+    alert(lng);
 
     //set coordenadas no mapa
 	var latlng = new google.maps.LatLng(lat, lng);
@@ -127,11 +129,10 @@ function getLatLng(){
     var ajax = $.ajax({
         url: '../action/carregarPessoaAction.php',
         type: 'POST',
-        async: true,
+        async: false,
         data: {facebookid: facebookid},
         success: function (data) {
             var text = data;
-            alert(data);
             var obj = JSON.parse(text);
             lat = obj.lat;
             lng = obj.lng;
