@@ -8,7 +8,7 @@
 	$facebookid = $_POST['facebookid'];
 	$lat = 0.0;
 	$lng = 0.0;
-	$query = "select lat, lng from pessoa where facebooid = '".$facebookid."';";
+	$query = "select lat, lng from pessoa where facebookid = '".$facebookid."';";
 	$res = pg_query($conexao, $query);
 	if(pg_num_rows($res) > 0){
 		while($row = pg_fetch_array($res)){
