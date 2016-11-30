@@ -19,10 +19,14 @@ function addMedicine(lat, lng){
 }
 
 function initialize(){
-    //carrego as coordenadas cadastradas na tabela pessoa
     var facebookid = $("#facebookid").val();
     alert(facebookid);
+    //carrego as coordenadas cadastradas na tabela pessoa
+    var lat;
+    var lng;
+    getLatLng();
 
+    //set coordenadas no mapa
 	var latlng = new google.maps.LatLng(-18.8800397, -47.05878999999999);
 
 	var options = {
@@ -119,3 +123,25 @@ function search() {
     );
 };
 
+
+function getLatLng(){
+    var ajax = $.ajax({
+        url: '../action/carregarPessoaAction.php',
+        type: 'POST',
+        async: true,
+        data: {facebookid: facebookid},
+        success: function (data) {
+            var text = data;
+            var obj = JSON.parse(text);
+
+            alert(obj.lat);
+            alert(obj.lng);
+            
+        },
+
+        error: function (xhr, ajaxOptions, thrownError) {
+            alert(xhr.status);
+            alert(thrownError);
+        }
+    });
+}
