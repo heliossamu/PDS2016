@@ -6,14 +6,14 @@
 	*/
 
 	$facebookid = $_POST['facebookid'];
-	$lat;
-	$lng;
-	$query = "select * from pessoa where facebooid = '".$facebookid."';";
+	$lat = 0.0;
+	$lng = 0.0;
+	$query = "select lat, lng from pessoa where facebooid = '".$facebookid."';";
 	$res = pg_query($conexao, $query);
 	if(pg_num_rows($res) > 0){
 		while($row = pg_fetch_array($res)){
 			$lat = $row['lat'];
-			$maquina = $row['lng'];
+			$lng = $row['lng'];
 		}
 	}
 
