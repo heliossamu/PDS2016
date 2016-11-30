@@ -17,9 +17,8 @@
 			session_start();
 			require_once __DIR__ . '/facebook/autoload.php';
 			require_once( 'facebook/Helpers/FacebookRedirectLoginHelper.php' );
-			//require_once __DIR__ . '/vendor/autoload.php';
 			require("vendor/autoload.php");
-			
+
 			$fb = new Facebook\Facebook([
 				'app_id' => '339187369764704',
 				'app_secret' => 'cc622d04da31a557d12c0786ee3d0fba',
@@ -39,10 +38,9 @@
 			}
 
 			$user = $response->getGraphUser();
-			echo 'Name: ' . $user['name'];
-
 			$facebookid = $user['id']; //importante!! será usado no js/first.js
-			echo $facebookid;
+
+			echo "<input type='hidden' name='facebookid' id='facebookid' value='".$facebookid."'>";
 		?>
 
 		<script>

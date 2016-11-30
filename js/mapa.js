@@ -19,6 +19,10 @@ function addMedicine(lat, lng){
 }
 
 function initialize(){
+    //carrego as coordenadas cadastradas na tabela pessoa
+    var facebookid = $("#facebookid").val();
+    alert(facebookid);
+
 	var latlng = new google.maps.LatLng(-18.8800397, -47.05878999999999);
 
 	var options = {
@@ -80,7 +84,7 @@ function initialize(){
 
 
 
-	loadMarkers();
+	//loadMarkers();
 
 	google.maps.event.addListener(map, 'dblclick', function (e){
 		addMedicine(e.latLng.lat(), e.latLng.lng());
