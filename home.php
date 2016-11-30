@@ -15,6 +15,11 @@
 	<body>
 		<?php
 			session_start();
+			require_once __DIR__ . '/facebook/autoload.php';
+			require_once( 'facebook/Helpers/FacebookRedirectLoginHelper.php' );
+			//require_once __DIR__ . '/vendor/autoload.php';
+			require("vendor/autoload.php");
+			
 			$fb = new Facebook\Facebook([
 				'app_id' => '339187369764704',
 				'app_secret' => 'cc622d04da31a557d12c0786ee3d0fba',
@@ -65,15 +70,6 @@
 			<div id="logo-div">
 				<img src="images/logo.png">
 			</div>
-
-			<!--
-			<div>
-				<ul>
-					<li><a href="#">Teste 1</a></li>
-				</ul>	
-			</div>
-			-->
-			
 
 			<div id="find-medicine-div">
 				<input type="text" id="search_address" value="" style="width: 300px; margin-right: 20px"/>
