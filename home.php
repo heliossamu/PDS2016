@@ -15,8 +15,29 @@
 	<body>
 		<?php
 			session_start();
+			$fb = new Facebook\Facebook([
+				'app_id' => '339187369764704',
+				'app_secret' => 'cc622d04da31a557d12c0786ee3d0fba',
+				'default_graph_version' => 'v2.2',
+			]);
 
-			echo $_SESSION['facebook_access_token'];
+			$accessToken = $_SESSION['facebook_access_token'];
+			try {
+				// Returns a `Facebook\FacebookResponse` object
+				$response = $fb->get('/me?fields=id,name', $accessToken);
+			} catch(Facebook\Exceptions\FacebookResponseException $e) {
+			    echo 'Graph returned an error: ' . $e->getMessage();
+			    exit;
+			} catch(Facebook\Exceptions\FacebookSDKException $e) {
+			    echo 'Facebook SDK returned an error: ' . $e->getMessage();
+			    exit;
+			}
+
+			$user = $response->getGraphUser();
+			echo 'Name: ' . $user['name'];
+
+			$facebookid = $user['id']; //importante!! será usado no js/first.js
+			echo $facebookid;
 		?>
 
 		<script>
@@ -35,9 +56,6 @@
 		     js.src = "//connect.facebook.net/en_US/sdk.js";
 		     fjs.parentNode.insertBefore(js, fjs);
 		   }(document, 'script', 'facebook-jssdk'));
-
-
-
 
 		</script>
 
