@@ -26,10 +26,10 @@ function initialize(){
     getLatLng();
 
     //set coordenadas no mapa
-	var latlng = new google.maps.LatLng(-18.8800397, -47.05878999999999);
+	var latlng = new google.maps.LatLng(lat, lng);
 
 	var options = {
-		zoom: 6,
+		zoom: 15,
 		center: latlng,
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	};
@@ -133,9 +133,8 @@ function getLatLng(){
             var text = data;
             alert(data);
             var obj = JSON.parse(text);
-
-            alert(obj.lat);
-            alert(obj.lng);
+            lat = obj.lat;
+            lng = obj.lng;
 
         },
 
