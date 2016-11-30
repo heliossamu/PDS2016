@@ -13,6 +13,12 @@
 
 	</head>
 	<body>
+		<?php
+			session_start();
+
+			echo $_SESSION['facebook_access_token'];
+		?>
+
 		<script>
 		  window.fbAsyncInit = function() {
 		    FB.init({
@@ -29,6 +35,10 @@
 		     js.src = "//connect.facebook.net/en_US/sdk.js";
 		     fjs.parentNode.insertBefore(js, fjs);
 		   }(document, 'script', 'facebook-jssdk'));
+
+
+
+
 		</script>
 
 		
