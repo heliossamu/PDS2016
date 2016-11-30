@@ -1,5 +1,7 @@
 var map;
 var facebookid = $("#facebookid").val();
+var lat;
+var lng;
 
 function addMedicine(lat, lng){
 	var sendData = '?lat='+lat+'&lng='+lng;
@@ -21,8 +23,6 @@ function addMedicine(lat, lng){
 
 function initialize(){
     //carrego as coordenadas cadastradas na tabela pessoa
-    var lat;
-    var lng;
     getLatLng();
 
     //set coordenadas no mapa
