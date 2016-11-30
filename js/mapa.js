@@ -131,6 +131,7 @@ function getLatLng(){
         data: {facebookid: facebookid},
         success: function (data) {
             var text = data;
+            alert(data);
             var obj = JSON.parse(text);
 
             alert(obj.lat);
