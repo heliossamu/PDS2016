@@ -71,15 +71,15 @@
 
 			<div onclick="alert('hue')">Adicionar remédio</div>
 
-			<a href="#" >Adicionar remédio</a>
-			<a href="#">Sair</a>
-
 			<div id="find-medicine-div">
 				<input type="text" id="search_address" value="" style="width: 300px; margin-right: 20px"/>
 
 				<input type="text" placeholder="Pesquisar: remédio ou sintomas.">
 				<button><img src="images/search.png"></button>
 			</div>
+
+			<div onclick="alert('vou sair')">Sair</div>
+
 			<div id="user-info">
 				<img src="images/teste.jpg">
 				Helio Nakayama
