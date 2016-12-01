@@ -37,11 +37,10 @@ function initialize(){
 	map = new google.maps.Map(document.getElementById("map-area"), options);
 
     var marker = new google.maps.Marker({
-        position: latLng,
+        position: latlng,
         map: map,
-        title: 'Hello World!'
+        title: 'Home'
     });
-
 
 	var input = (document.getElementById('search_address'));
     var autocomplete = new google.maps.places.Autocomplete(input);
