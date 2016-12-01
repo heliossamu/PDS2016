@@ -1,6 +1,7 @@
 //aqui vai todas as funçoes js utilizadas pelo site
 
 function insertMedicine(){
+	var serialized = $("#cadastro_remedio").serialize();
 	//primeiro, preciso pegar o pessoaid atraves do facebookid
 	var ajax = $.ajax({
 		url: 'action/carregarPessoaIdAction.php',
@@ -8,7 +9,24 @@ function insertMedicine(){
 		async: true,
 		data: $("#cadastro_remedio").serialize(),
 		success: function (data) {
-        	alert(data);
+			var pessoaid = data;
+    		var ajax2 = $.ajax({
+				url: 'action/cadastrarMedicamentoAction.php',
+				type: 'POST',
+				async: true,
+				data: serialized + "&pessoaid=" + pessoaid,
+				success: function (data) {
+		        	alert("cadastro realizado com sucesso!");
+		    	},
+
+				error: function (xhr, ajaxOptions, thrownError) {
+			        //alert(xhr.status);
+			        //alert(thrownError);
+		      	}
+			});    	
+
+
+
     	},
 
 		error: function (xhr, ajaxOptions, thrownError) {

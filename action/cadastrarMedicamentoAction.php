@@ -1,22 +1,21 @@
 <?php
 	include '../conexao.php';
 
-	//inserindo dados na tabela remedio do banco de dados
-	$remedioid = 1;
-	$pessoaid = 1;
-	$lat = round($_POST['lat'], 6);
-	$lng = round($_POST['lng'], 6);
+	//inserindo na tabela remedio do banco de dados
+	$pessoaid = $_POST['pessoaid'];
 	$nome = $_POST['nome'];
-	$sintomas = $_POST['sintomas'];
 	$datavalidade = $_POST['datavalidade'];
+	$sintomas = $_POST['sintomas'];
+	$preco = $_POST['preco'];
+
 	
-	$query = "INSERT INTO remedio(pessoaid, nome, datavalidade, sintomas, coordx, coordy) VALUES(".$pessoaid.",";
-	$query .= "'".$nome."', '".$datavalidade."', '".$sintomas."', '".$lat."', '".$lng."');";
+	$query = "INSERT INTO remedio(pessoaid, nome, datavalidade, sintomas, preco) VALUES(".$pessoaid.",";
+	$query .= "'".$nome."', '".$datavalidade."', '".$sintomas."', ".$preco.");";
 	
-	$result = mysql_query($query);
-	if (!$result) {
+	$res = pg_query($conexao, $query);
+	if (!$res) {
     	//die('Invalid query: ' . mysql_error());
 	}
 
-	mysql_close($conexao); 
+	pg_close($conexao); 
 ?>
