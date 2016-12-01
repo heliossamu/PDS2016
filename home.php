@@ -42,9 +42,6 @@
 
 			echo "<input type='hidden' name='facebookid' id='facebookid' value='".$facebookid."'>";
 
-			if(isset($_GET['action']) && $_GET['action'] === 'logout'){
-		        $facebook->destroySession();
-		    }
 		?>
 
 		<script>
@@ -82,7 +79,7 @@
 				<button><img src="images/search.png"></button>
 			</div>
 
-			<div><a href="?action=logout">Sair</a></div>
+			<div><a href="/logout" onclick="FB.logout();">Logout</a> </div>
 
 			<div id="user-info">
 				<img src="images/teste.jpg">
