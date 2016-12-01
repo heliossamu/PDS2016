@@ -36,10 +36,19 @@ function initialize(){
 
 	map = new google.maps.Map(document.getElementById("map-area"), options);
 
+
+    var homeIcon = {
+        url: '../images/home.png',
+        scaledSize: new google.maps.Size(50, 50), // scaled size
+        origin: new google.maps.Point(0,0), // origin
+        anchor: new google.maps.Point(0, 0) // anchor
+    };
+
+
     var marker = new google.maps.Marker({
         position: latlng,
         map: map,
-        icon: '../images/home.png',
+        icon: homeIcon,
         title: 'Sua posição'
     });
 
