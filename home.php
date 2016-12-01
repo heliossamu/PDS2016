@@ -85,7 +85,9 @@
 
 		<div class="main-div">
 			<div class="friend-list">
-
+				<div>
+					teste
+				</div>
 			</div><!--
 			--><div class="map">
 				<div id="map-area">
