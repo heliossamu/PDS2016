@@ -39,11 +39,10 @@ function initialize(){
 
     var homeIcon = {
         url: '../images/home.png',
-        scaledSize: new google.maps.Size(50, 50), // scaled size
-        origin: new google.maps.Point(0,0), // origin
-        anchor: new google.maps.Point(0, 0) // anchor
+        scaledSize: new google.maps.Size(40, 40),
+        origin: new google.maps.Point(0,0),
+        anchor: new google.maps.Point(0, 0)
     };
-
 
     var marker = new google.maps.Marker({
         position: latlng,
@@ -51,8 +50,7 @@ function initialize(){
         icon: homeIcon,
         title: 'Sua posição'
     });
-
-
+    
 
 	var input = (document.getElementById('search_address'));
     var autocomplete = new google.maps.places.Autocomplete(input);

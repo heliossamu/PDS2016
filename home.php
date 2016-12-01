@@ -69,6 +69,8 @@
 				<img src="images/logo.png">
 			</div>
 
+			<a href="#"></a>
+
 			<div id="find-medicine-div">
 				<input type="text" id="search_address" value="" style="width: 300px; margin-right: 20px"/>
 
