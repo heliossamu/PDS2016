@@ -39,7 +39,7 @@ function initialize(){
     var marker = new google.maps.Marker({
         position: latlng,
         map: map,
-        icon: '../image/home.png',
+        icon: '../images/home.png',
         title: 'Sua posição'
     });
 
