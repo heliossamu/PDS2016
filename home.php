@@ -79,7 +79,7 @@
 				<button><img src="images/search.png"></button>
 			</div>
 
-			<div><a href="/logout" onclick="FB.logout();">Logout</a> </div>
+			<div><a href="index.php" onclick="FB.logout();">Logout</a> </div>
 
 			<div id="user-info">
 				<img src="images/teste.jpg">
