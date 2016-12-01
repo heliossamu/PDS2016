@@ -39,8 +39,11 @@ function initialize(){
     var marker = new google.maps.Marker({
         position: latlng,
         map: map,
-        title: 'Home'
+        icon: '../image/home.png',
+        title: 'Sua posição'
     });
+
+
 
 	var input = (document.getElementById('search_address'));
     var autocomplete = new google.maps.places.Autocomplete(input);
