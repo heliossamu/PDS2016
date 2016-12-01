@@ -69,7 +69,9 @@
 				<img src="images/logo.png">
 			</div>
 
-			<a href="#">Adicionar remédio</a>
+			<div onclick="alert('hue')">Adicionar remédio</div>
+
+			<a href="#" >Adicionar remédio</a>
 			<a href="#">Sair</a>
 
 			<div id="find-medicine-div">
