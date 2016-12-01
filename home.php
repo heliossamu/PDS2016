@@ -41,6 +41,10 @@
 			$facebookid = $user['id']; //importante!! será usado no js/first.js
 
 			echo "<input type='hidden' name='facebookid' id='facebookid' value='".$facebookid."'>";
+
+			if(isset($_GET['action']) && $_GET['action'] === 'logout'){
+		        $facebook->destroySession();
+		    }
 		?>
 
 		<script>
