@@ -24,19 +24,24 @@ function addMedicine(lat, lng){
 function initialize(){
     //carrego as coordenadas cadastradas na tabela pessoa
     getLatLng();
-    alert(lat);
-    alert(lng);
 
     //set coordenadas no mapa
 	var latlng = new google.maps.LatLng(lat, lng);
 
 	var options = {
-		zoom: 15,
+		zoom: 17,
 		center: latlng,
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	};
 
 	map = new google.maps.Map(document.getElementById("map-area"), options);
+
+    var marker = new google.maps.Marker({
+        position: latLng,
+        map: map,
+        title: 'Hello World!'
+    });
+
 
 	var input = (document.getElementById('search_address'));
     var autocomplete = new google.maps.places.Autocomplete(input);
