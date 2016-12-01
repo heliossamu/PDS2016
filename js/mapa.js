@@ -17,7 +17,7 @@ function addMedicine(){
 		'transitionOut': 'elastic',
 		'type': 'iframe',
 		'titleShow': true,
-		'title': 'New Medicine',
+		'title': 'Novo remédio',
 		'href': 'cadastro_remedio.php'+sendData,
 	});
 }

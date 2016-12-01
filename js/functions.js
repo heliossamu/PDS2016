@@ -1,6 +1,10 @@
 //aqui vai todas as funçoes js utilizadas pelo site
 
 function insertMedicine(){
+	//primeiro, preciso pegar o pessoaid atraves do facebookid
+
+
+
 	var ajax = $.ajax({
 		url: 'action/cadastrarMedicamentoAction.php',
 		type: 'POST',

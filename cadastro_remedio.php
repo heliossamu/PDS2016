@@ -12,26 +12,25 @@
 		<div class="main-div">
 			<div id="img-container">
 				<div id="img-div"></div><!--
-				--><div id="img-txt">Adding a new Medicine</div>
+				--><div id="img-txt">Adicionar novo remédio</div>
 			</div>
 			<form id='cadastro_remedio' method='POST'>
 				<?php
-					echo "<input id='lat' name='lat' type='hidden' value='" . $_GET['lat'] . "'>";
-					echo "<input id='lng' name='lng' type='hidden' value='". $_GET['lng'] ."'>";
+					echo "<input type='hidden' name='facebookid' id='facebookid' value='".$_GET['facebookid']."'>";
 				?>
 
 				<div id="form-div">
-					<p>Medicine Name:</p>
+					<p>Nome do remédio:</p>
 					<input id="nome" name="nome" type="text">
 				</div>
 
 				<div id="form-div">
-					<p>Symptoms:</p>
+					<p>Sintomas:</p>
 					<input id="sintomas" name="sintomas" type="text">
 				</div>
 
 				<div id="form-div">
-					<p>Expiration Date:</p>
+					<p>Data de validade:</p>
 					<input id="datavalidade" name="datavalidade" type="text" style="width: 30%">
 				<br>
 				<br>
@@ -44,7 +43,6 @@
 		</div>
 		<?php
 			//echo $_GET['lat'];
-			//echo $_GET['lng'];
 		?>
 	</body>
 
