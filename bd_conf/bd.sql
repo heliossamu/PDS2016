@@ -15,10 +15,11 @@ create table pessoa (
 
 
 create table remedio(
-    remedioid serial integer primary key,
+    remedioid serial primary key,
     pessoaid integer references pessoa(pessoaid),
     nome varchar(80),
     datavalidade varchar(20),
-    sintomas varchar(80)
+    sintomas varchar(80),
+    preco float
 );
 

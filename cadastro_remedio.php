@@ -32,6 +32,9 @@
 				<div id="form-div">
 					<p>Data de validade:</p>
 					<input id="datavalidade" name="datavalidade" type="text" style="width: 30%">
+
+					<p>Preço</p>
+					<input id="preco" name="preco" type="text" style="width: 30%">
 				<br>
 				<br>
 				<div id="button-div">
