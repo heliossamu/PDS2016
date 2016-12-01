@@ -69,7 +69,7 @@
 				<img src="images/logo.png">
 			</div>
 
-			<div onclick="alert('hue')">Adicionar remédio</div>
+			<div onclick="addMedicine()">Adicionar remédio</div>
 
 			<div id="find-medicine-div">
 				<input type="text" id="search_address" value="" style="width: 300px; margin-right: 20px"/>

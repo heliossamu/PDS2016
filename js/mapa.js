@@ -3,8 +3,9 @@ var facebookid = $("#facebookid").val();
 var lat;
 var lng;
 
-function addMedicine(lat, lng){
-	var sendData = '?lat='+lat+'&lng='+lng;
+function addMedicine(){
+    var sendData = '?facebookid='+facebookid;
+	//var sendData = '?lat='+lat+'&lng='+lng;
 
 	$.fancybox({
 		'fitToView': false,
@@ -50,7 +51,7 @@ function initialize(){
         icon: homeIcon,
         title: 'Sua posição'
     });
-    
+
 
 	var input = (document.getElementById('search_address'));
     var autocomplete = new google.maps.places.Autocomplete(input);
@@ -105,11 +106,12 @@ function initialize(){
 
 	//loadMarkers();
 
+    /*
 	google.maps.event.addListener(map, 'dblclick', function (e){
 		addMedicine(e.latLng.lat(), e.latLng.lng());
-		//alert("Latitude: " + e.latLng.lat() + "\r\nLongitude: " + e.latLng.lng());
 		event.stop();
 	});
+    */
 }
 
 initialize();
