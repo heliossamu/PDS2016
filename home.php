@@ -78,7 +78,7 @@
 				<button><img src="images/search.png"></button>
 			</div>
 
-			<div onclick="alert('vou sair')">Sair</div>
+			<div><a href="?action=logout">Sair</a></div>
 
 			<div id="user-info">
 				<img src="images/teste.jpg">
