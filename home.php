@@ -69,7 +69,7 @@
 				<img src="images/logo.png">
 			</div>
 
-			<a href="#"></a>
+			<a href="#">Adicionar remédio</a>
 
 			<div id="find-medicine-div">
 				<input type="text" id="search_address" value="" style="width: 300px; margin-right: 20px"/>
@@ -85,9 +85,6 @@
 
 		<div class="main-div">
 			<div class="friend-list">
-				<div>
-					teste
-				</div>
 			</div><!--
 			--><div class="map">
 				<div id="map-area">
