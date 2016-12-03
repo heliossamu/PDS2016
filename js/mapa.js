@@ -22,6 +22,27 @@ function addMedicine(){
 	});
 }
 
+function checkMedicine(pessoaid){
+    var sendData = '?pessoaid='+pessoaid;
+    //var sendData = '?lat='+lat+'&lng='+lng;
+
+    $.fancybox({
+        'fitToView': false,
+        'autoSize': false,
+        'width': 500,
+        'height': 340,
+        'padding': 10,
+        'transitionIn': 'elastic',
+        'transitionOut': 'elastic',
+        'type': 'iframe',
+        'titleShow': true,
+        'title': 'Ver remedios',
+        'href': 'cadastro_remedio.php'+sendData,
+    });
+}
+
+
+
 function initialize(){
     //carrego as coordenadas cadastradas na tabela pessoa
     getLatLng();

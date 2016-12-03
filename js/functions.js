@@ -81,7 +81,9 @@ function loadMarkers(){
 	            });
 
 	            marker.addListener('click', function() {
-				    alert('ueueue: ' + pessoaid);
+				    //alert('ueueue: ' + pessoaid);
+				    checkMedicine(pessoaid)
+				    
 				});
 		    });
 			
