@@ -17,8 +17,6 @@
 			$pessoaid = $_GET['pessoaid'];
 			
 			$query = "SELECT * FROM remedio WHERE pessoaid = " . $pessoaid . ";";
-			
-			echo $query;
 
 			$res = pg_query($conexao, $query);
 			if(pg_num_rows($res) > 0){
@@ -29,19 +27,21 @@
 
 						echo "<div id='comprar-button'>Comprar</div>";
 					echo "</div>";
+					echo "<br>";
 				}
 			}
 
 			pg_close($conexao); 
 		?>
 
+		<!--
 		<div id='remedio-div'>
 			<p>Nome: TEste  -  Data Validade: 12/12/2016</p>
 			<p>sintomas: teste - Preço: 12.69</p>
 
 			<div id='comprar-button'>Comprar</div>
 		</div>
-		
+		-->
 
 
 	</body>
