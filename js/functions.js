@@ -79,7 +79,7 @@ function loadMarkers(){
 	            });
 
 	            marker.addListener('click', function() {
-				    alert(this.ue);
+				    alert('ueueue');
 				});
 		    });
 			
