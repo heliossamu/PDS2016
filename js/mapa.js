@@ -37,7 +37,7 @@ function checkMedicine(pessoaid){
         'type': 'iframe',
         'titleShow': true,
         'title': 'Ver remedios',
-        'href': 'cadastro_remedio.php'+sendData,
+        'href': 'verificar_remedio.php'+sendData,
     });
 }
 
