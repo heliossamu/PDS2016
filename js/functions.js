@@ -67,6 +67,7 @@ function loadMarkers(){
 		url: 'action/carregarTudoPessoaAction.php',
 		type: 'POST',
 		async: true,
+		data: {facebookid: facebookid},
 		//data: $("#cadastro_remedio").serialize(),
 		success: function (data) {
         	
