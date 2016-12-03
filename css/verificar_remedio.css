@@ -12,7 +12,7 @@ form{
 
 #remedio-div{
 	background-color: #eee;
-	border: 1px solid black;
+	border: 1px solid #d5d5c3;
 	width: 100%;
 	border-radius: 6px;
 }
@@ -23,12 +23,13 @@ form{
 }
 
 #comprar-button{
+	text-align: center;
 	background-color: white;
-	border: 1px solid black;
+	border: 1px solid #d5d5c3;
 	border-radius: 6px;
 	padding: 4px;
-	margin-left: 10%;
-	margin-right: 10%;
+	margin-left: 20%;
+	margin-right: 20%;
 	margin-bottom: 10px;
 }
 
