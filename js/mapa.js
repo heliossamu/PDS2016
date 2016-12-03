@@ -104,7 +104,7 @@ function initialize(){
 
 
 
-	//loadMarkers();
+	loadMarkers();
 
     /*
 	google.maps.event.addListener(map, 'dblclick', function (e){

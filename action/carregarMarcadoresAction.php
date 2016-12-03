@@ -5,15 +5,15 @@
 	$retorno = '[';
 
 	$query = "SELECT * FROM remedio";
-	$result = mysql_query($query);
+	$result = pg_query($conexao, $query);
 	if (!$result) {
     	//die('Invalid query: ' . mysql_error());
 	}else{
-		$quant = mysql_num_rows($result);
+		$quant = pg_num_rows($result);
 		$i = 0;
-		while ($row = mysql_fetch_assoc($result)) {
+		while ($row = pg_fetch_array($result)) {
 			$retorno .= '{';
-			$retorno .= '"lat":' . $row['coordx'] . ', "lng":' . $row['coordy'] . ',';
+			$retorno .= '"pessoaid":' . $row['pessoaid'] . ', "nome":' . $row['nome'] . ',';
 			$retorno .= '"nome":"' . $row['nome'] . '", "sintomas":"' . $row['sintomas'] . '",';
 			$retorno .= '"datavalidade":"' . $row['datavalidade'] . '"';
 			$retorno .= '}';			
@@ -32,5 +32,5 @@
 	
 	echo $retorno;
 
-	mysql_close($conexao);
+	pg_close($conexao);
 ?>

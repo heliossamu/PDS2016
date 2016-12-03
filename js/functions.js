@@ -57,8 +57,14 @@ function insertMedicine(){
 
 function loadMarkers(){
 
+	//por ser utilizado em mapa.js, sabemos qual o facebookid esta sendo utilizado
+	//so carregarei os pessoaid. Assim, ao clicar no marcador, podemos carregar os remedios 
+	//de acordo com o id dela. Pessoaid eh uma FK para a tabela remedio.
+
+	//preciso carregar o pessoaid juntamente com as coordenadas dela.
+
 	var ajax = $.ajax({
-		url: 'action/carregarMarcadoresAction.php',
+		url: 'action/carregarTudoPessoaAction.php',
 		type: 'POST',
 		async: true,
 		//data: $("#cadastro_remedio").serialize(),
@@ -68,7 +74,7 @@ function loadMarkers(){
         	$.each($.parseJSON(data), function() {
 		        var marker = new google.maps.Marker({
 	                position: new google.maps.LatLng(this.lat, this.lng),
-	                title: this.nome,
+	                title: this.pessoaid,
 	                map: map
 	            });
 		    });
