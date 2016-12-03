@@ -33,5 +33,10 @@ form{
 	margin-left: 20%;
 	margin-right: 20%;
 	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+#comprar-hover{
+	background-color: #d5d5c3;
 }
 
