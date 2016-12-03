@@ -19,6 +19,7 @@ form{
 
 #remedio-div p{
 	padding: 10px;
+	padding-bottom: 0px;
 	margin: 0;
 }
 
@@ -28,6 +29,7 @@ form{
 	border: 1px solid #d5d5c3;
 	border-radius: 6px;
 	padding: 4px;
+	margin-top: 10px;
 	margin-left: 20%;
 	margin-right: 20%;
 	margin-bottom: 10px;
