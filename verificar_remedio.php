@@ -12,7 +12,7 @@
 		<?php 
 			echo "<input type='hidden' id='pessoaid' name='pessoaid' value='".$_GET['pessoaid']."'>";
 			
-			include '../conexao.php';
+			include 'conexao.php';
 			//inserindo na tabela remedio do banco de dados
 			$pessoaid = $_GET['pessoaid'];
 			
