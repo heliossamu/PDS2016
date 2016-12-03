@@ -97,9 +97,20 @@ function loadMarkers(){
 
 
 function loadMedicine(pessoaid){
+	var ajax = $.ajax({
+		url: 'action/carregarPessoaIdAction.php',
+		type: 'POST',
+		async: true,
+		data: $("#cadastro_remedio").serialize(),
+		success: function (data) {
+			alert(data); 	
+    	},
 
-
-
+		error: function (xhr, ajaxOptions, thrownError) {
+	        //alert(xhr.status);
+	        //alert(thrownError);
+      	}
+    });
 }
 
 

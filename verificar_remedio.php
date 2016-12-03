@@ -11,6 +11,26 @@
 	<body>
 		<?php 
 			echo "<input type='hidden' id='pessoaid' name='pessoaid' value='".$_GET['pessoaid']."'>";
+			
+			include '../conexao.php';
+			//inserindo na tabela remedio do banco de dados
+			$pessoaid = $_GET['pessoaid'];
+			
+			$query = "SELECT * FROM remedio WHERE pessoaid = " . $pessoaid . ";";
+			
+			$res = pg_query($conexao, $query);
+			if(pg_num_rows($res) > 0){
+				while($row = pg_fetch_array($res)){
+					echo "<div id='remedio-div'>";
+						echo "<p>Nome: ". $row['nome'] ."  -  Data Validade: ". $row['datavalidade'] ."</p>";
+						echo "<p>sintomas: ". $row['sintomas'] ." - Preço: ". $row['preco'] ."</p>";
+
+						echo "<div id='comprar-button'>Comprar</div>";
+					echo "</div>";
+				}
+			}
+
+			pg_close($conexao); 
 		?>
 
 		<div id='remedio-div'>
