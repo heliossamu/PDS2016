@@ -22,8 +22,8 @@
 			if(pg_num_rows($res) > 0){
 				while($row = pg_fetch_array($res)){
 					echo "<div id='remedio-div'>";
-						echo "<p><b>Nome:</b> ". $row['nome'] ."  -  <b>Data Validade:</b> ". $row['datavalidade'] ."</p>";
-						echo "<p><b>sintomas:</b> ". $row['sintomas'] ." - <b>Preço:</b> ". $row['preco'] ."</p>";
+						echo "<p><b>Nome:</b> ". $row['nome'] ."  &nbsp&nbsp  <b>Data Validade:</b> ". $row['datavalidade'] ."</p>";
+						echo "<p><b>sintomas:</b> ". $row['sintomas'] ." &nbsp&nbsp <b>Preço:</b> ". $row['preco'] ."</p>";
 
 						echo "<div id='comprar-button'>Comprar</div>";
 					echo "</div>";
