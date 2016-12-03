@@ -72,6 +72,8 @@ function loadMarkers(){
 		success: function (data) {
         	alert(data);
         	$.each($.parseJSON(data), function() {
+        		var pessoaid = this.pessoaid;
+
 		        var marker = new google.maps.Marker({
 	                position: new google.maps.LatLng(this.lat, this.lng),
 	                title: 'ue: ' + this.pessoaid,
@@ -79,7 +81,7 @@ function loadMarkers(){
 	            });
 
 	            marker.addListener('click', function() {
-				    alert('ueueue');
+				    alert('ueueue: ' + pessoaid);
 				});
 		    });
 			
