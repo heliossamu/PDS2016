@@ -14,8 +14,9 @@
 		?>
 
 		<div id='remedio-div'>
-			<p>HUE</p>
-			
+			<p>Nome: TEste  -  Data Validade: 12/12/2016</p>
+			<p>sintomas: teste - Preço: 12.69</p>
+
 			<div id='comprar-button'>Comprar</div>
 		</div>
 		
