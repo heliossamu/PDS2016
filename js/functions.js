@@ -70,7 +70,6 @@ function loadMarkers(){
 		data: {facebookid: facebookid},
 		//data: $("#cadastro_remedio").serialize(),
 		success: function (data) {
-        	alert(data);
         	$.each($.parseJSON(data), function() {
         		var pessoaid = this.pessoaid;
 
@@ -98,9 +97,9 @@ function loadMarkers(){
 
 
 function loadMedicine(pessoaid){
-	
 
-	
+
+
 }
 
 
