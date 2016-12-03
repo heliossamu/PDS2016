@@ -77,6 +77,10 @@ function loadMarkers(){
 	                title: 'ue: ' + this.pessoaid,
 	                map: map
 	            });
+
+	            marker.addListener('click', function() {
+				    alert(this.ue);
+				});
 		    });
 			
     	},
