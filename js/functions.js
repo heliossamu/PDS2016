@@ -97,4 +97,10 @@ function loadMarkers(){
 }
 
 
+function loadMedicine(pessoaid){
+	
+
+	
+}
+
 
