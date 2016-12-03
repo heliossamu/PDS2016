@@ -18,6 +18,8 @@
 			
 			$query = "SELECT * FROM remedio WHERE pessoaid = " . $pessoaid . ";";
 			
+			echo $query;
+
 			$res = pg_query($conexao, $query);
 			if(pg_num_rows($res) > 0){
 				while($row = pg_fetch_array($res)){
