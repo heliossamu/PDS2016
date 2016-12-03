@@ -13,7 +13,7 @@ form{
 #remedio-div{
 	background-color: red;
 	width: 100%;
-	padding: 0.6%;
+	padding: 6px;
 }
 
 #remedio-div p{
@@ -22,6 +22,8 @@ form{
 
 #comprar-button{
 	background-color: blue;
-	
+	padding: 4px;
+	margin-left: 10%;
+	margin-right: 10%;
 }
 
