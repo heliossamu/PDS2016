@@ -19,7 +19,7 @@
 		$i = 0;
 		while ($row = pg_fetch_array($result)) {
 			$retorno .= '{';
-			$retorno .= '"pessoaid":' . $row['pessoaid'] . ', "lat":' . $row['lat'] . ', $lng:' . $row['lng'];
+			$retorno .= '"pessoaid":' . $row['pessoaid'] . ', "lat":' . $row['lat'] . ', "lng":' . $row['lng'];
 			$retorno .= '}';			
 			if($i != $quant-1){
 				$retorno .= ', ';
