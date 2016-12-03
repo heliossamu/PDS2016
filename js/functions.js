@@ -71,11 +71,10 @@ function loadMarkers(){
 		//data: $("#cadastro_remedio").serialize(),
 		success: function (data) {
         	
-        	alert(data);
         	$.each($.parseJSON(data), function() {
 		        var marker = new google.maps.Marker({
 	                position: new google.maps.LatLng(this.lat, this.lng),
-	                title: 'ue',
+	                title: this.pessoaid,
 	                map: map
 	            });
 		    });
