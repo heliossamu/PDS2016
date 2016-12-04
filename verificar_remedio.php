@@ -15,8 +15,27 @@
 			include 'conexao.php';
 			//inserindo na tabela remedio do banco de dados
 			$pessoaid = $_GET['pessoaid'];
-			
-			$query = "SELECT * FROM remedio WHERE pessoaid = " . $pessoaid . ";";
+			$nomeremedio = "";
+			$sintomas = "";
+
+			if(isset($_GET['nomeremedio']) && !empty($_GET['nomeremedio'])){
+				$nomeremedio = $_GET['nomeremedio'];
+			}
+
+			if(isset($_GET['sintomas']) && !empty($_GET['sintomas'])){
+				$sintomas = $_GET['sintomas'];
+			}
+
+			$query = "SELECT * FROM remedio WHERE pessoaid = " . $pessoaid . " ";
+			if(!empty($nomeremedio) || !empty($sintomas)){
+				if(!empty($nomeremedio)){
+					$query .= " AND nome = '" . $nomeremedio . "' ";
+				}
+
+				if(!empty($sintomas)){
+					$query .= " AND sintomas = '" . $sintomas ."' ";
+				}
+			}
 
 			$res = pg_query($conexao, $query);
 			if(pg_num_rows($res) > 0){
