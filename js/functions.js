@@ -129,7 +129,6 @@ function filter(){
 	var remedio = $("#nomeremedio").val();
 	var sintomas = $("#sintomas").val();
 
-	alert(remedio + " - " + sintomas);
 	clear();
 	//pego apenas as pessoas com os remedios desejados utilizando o filtro
 
