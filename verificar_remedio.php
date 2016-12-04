@@ -46,7 +46,7 @@
 
 						//echo "<div id='comprar-button'>Comprar</div>";
 
-						echo '<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">';
+						echo '<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style='text-align: center;'>';
 						echo '<input type="hidden" name="cmd" value="_s-xclick">';
 						echo '<input type="hidden" name="hosted_button_id" value="X6WV5KFKMT4T8">';
 						echo '<input type="image" src="https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - A maneira fácil e segura de enviar pagamentos online!">';
