@@ -41,17 +41,18 @@
 			$facebookid = $user['id']; //importante!! será usado no js/first.js
 			$username = $user['name'];
 
-			//$friends = $fb->api('/me/friends');
-			//echo $friends;
-
-			$request = new Facebook\FacebookRequest(
-			  $session,
-			  'GET',
-			  '/'. $facebookid .'/friends'
-			);
-			$response = $request->execute();
-			$graphObject = $response->getGraphObject();
-
+			try {
+				// Returns a `Facebook\FacebookResponse` object
+				$response = $fb->get('/me?friends', $accessToken);
+			} catch(Facebook\Exceptions\FacebookResponseException $e) {
+			    echo 'Graph returned an error: ' . $e->getMessage();
+			    exit;
+			} catch(Facebook\Exceptions\FacebookSDKException $e) {
+			    echo 'Facebook SDK returned an error: ' . $e->getMessage();
+			    exit;
+			}
+			
+			
 			echo "<input type='hidden' name='facebookid' id='facebookid' value='".$facebookid."'>";
 
 		?>
