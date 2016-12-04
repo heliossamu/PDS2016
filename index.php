@@ -40,7 +40,7 @@
 
 			$helper = $fb->getRedirectLoginHelper();
 
-			$permissions = ['email']; // Optional permissions
+			$permissions = ['email', 'user_friends']; // Optional permissions
 			$loginUrl = $helper->getLoginUrl('https://getmedicine.herokuapp.com/first.php', $permissions);
 
 			
