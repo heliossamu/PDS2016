@@ -39,6 +39,7 @@
 
 			$user = $response->getGraphUser();
 			$facebookid = $user['id']; //importante!! será usado no js/first.js
+			$username = $user['name'];
 
 			echo "<input type='hidden' name='facebookid' id='facebookid' value='".$facebookid."'>";
 
@@ -112,7 +113,9 @@
 
 			<div id="user-info">
 				<img src="images/teste.jpg">
-				Helio Nakayama
+				<?php
+					echo $username;
+				?>
 			</div>
 		</div>
 
