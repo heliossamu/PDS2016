@@ -36,6 +36,7 @@
 					$query .= " AND sintomas = '" . $sintomas ."' ";
 				}
 			}
+			echo $query;
 
 			$res = pg_query($conexao, $query);
 			if(pg_num_rows($res) > 0){
