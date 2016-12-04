@@ -80,7 +80,7 @@
 					
 					$query = "SELECT nome FROM nome_remedio;";
 
-					echo "<select id='nomeremedio' name='nomeremedio' value='' style='padding: 4px; transform:translate(0, -1px); margin-right: 10px'>";
+					echo "<select id='nomeremedio' name='nomeremedio' value='' style='padding: 4px; transform:translate(0, -1px); margin-right: 4px;'>";
 					echo "<option selected='selected'>Nome do Remédio</option>";
 					$res = pg_query($conexao, $query);
 					if(pg_num_rows($res) > 0){
@@ -92,7 +92,7 @@
 
 					$query = "SELECT nome FROM nome_sintoma;";
 
-					echo "<select id='sintomas' name='sintomas' value='' style='padding: 4px; transform:translate(0, -1px);'>";
+					echo "<select id='sintomas' name='sintomas' value='' style='padding: 4px; transform:translate(0, -1px); margin-right: 4px;'>";
 					echo "<option selected='selected'>Sintoma</option>";
 					$res = pg_query($conexao, $query);
 					if(pg_num_rows($res) > 0){
