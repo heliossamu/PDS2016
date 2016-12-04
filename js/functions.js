@@ -114,12 +114,14 @@ function loadMedicine(pessoaid){
 }
 
 
+//vai filtras as pessoas e adicionar novos marcadores
 function filter(){
 
 	var remedio = $("#nomeremedio").val();
 	var sintomas = $("#sintomas").val();
 
 	alert(remedio + " - " + sintomas);
+	clearMarkers();
 
 	//pego apenas as pessoas com os remedios desejados utilizando o filtro
 
