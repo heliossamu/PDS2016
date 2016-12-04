@@ -44,6 +44,8 @@
 			try {
 				// Returns a `Facebook\FacebookResponse` object
 				$response = $fb->get('/me?friends', $accessToken);
+				$graphEdge = $response->getGraphEdge()->asArray();
+				print_r($graphEdge);
 			} catch(Facebook\Exceptions\FacebookResponseException $e) {
 			    echo 'Graph returned an error: ' . $e->getMessage();
 			    exit;
@@ -51,8 +53,8 @@
 			    echo 'Facebook SDK returned an error: ' . $e->getMessage();
 			    exit;
 			}
-			
-			
+
+
 			echo "<input type='hidden' name='facebookid' id='facebookid' value='".$facebookid."'>";
 
 		?>
