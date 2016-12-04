@@ -90,18 +90,20 @@
 					}
 					echo "</select>";
 
+					$query = "SELECT nome FROM nome_sintoma;";
+
+					echo "<select id='sintomas' name='sintomas' value='' style='padding: 4px; transform:translate(0, -1px);'>";
+					echo "<option selected='selected'>Sintoma</option>";
+					$res = pg_query($conexao, $query);
+					if(pg_num_rows($res) > 0){
+						while($row = pg_fetch_array($res)){
+							echo "<option>". $row['nome'] ."</option>";
+						}
+					}
+					echo "</select>";	
+
 					pg_close($conexao);
 				?>
-
-
-
-				
-
-				<select id='sintomas' name='sintomas' value='' style='padding: 4px; transform:translate(0, -1px);'>
-					<option>Sintomas</option>
-					<option>dor de cabeça</option>
-					<option>febre</option>
-				</select>
 
 				<button><img src="images/search.png"></button>
 			</div>
