@@ -44,14 +44,14 @@
 			//$friends = $fb->api('/me/friends');
 			//echo $friends;
 
-			$request = new FacebookRequest(
+			$request = new Facebook\FacebookRequest(
 			  $session,
 			  'GET',
 			  '/'. $facebookid .'/friends'
 			);
 			$response = $request->execute();
 			$graphObject = $response->getGraphObject();
-			
+
 			echo "<input type='hidden' name='facebookid' id='facebookid' value='".$facebookid."'>";
 
 		?>
