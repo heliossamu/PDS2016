@@ -72,6 +72,9 @@ function loadMarkers(){
 		success: function (data) {
         	$.each($.parseJSON(data), function() {
         		var pessoaid = this.pessoaid;
+        		var nomeremedio = $("#nomeremedio").val();
+        		var sintomas = $("#sintomas").val();
+        		alert(nomeremedio + " - " + sintomas);
 
 		        var marker = new google.maps.Marker({
 	                position: new google.maps.LatLng(this.lat, this.lng),
@@ -120,6 +123,10 @@ function filter(){
 	var sintomas = $("#sintomas").val();
 
 	alert(remedio + " - " + sintomas);
+
+	//pego apenas as pessoas com os remedios desejados utilizando o filtro
+
+	//depois ao abrir para checar os remedios, preciso utilizar os filtros também
 
 }
 
