@@ -116,7 +116,7 @@ function loadMedicine(pessoaid){
 }
 
 
-function clearMarkers(){
+function ue(){
 	for (var i = 0; i < markers.length; i++) {
     	markers[i].setMapOnAll(null);
     	markers = [];
@@ -131,6 +131,7 @@ function filter(){
 
 	alert(remedio + " - " + sintomas);
 	clearMarkers();
+	markers = [];
 
 	//pego apenas as pessoas com os remedios desejados utilizando o filtro
 
