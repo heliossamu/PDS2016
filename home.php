@@ -75,7 +75,19 @@
 			<div id="find-medicine-div">
 				<input type="text" id="search_address" value="" style="width: 300px; margin-right: 20px"/>
 
-				<input type="text" placeholder="Pesquisar: remédio ou sintomas.">
+				<!--input type="text" placeholder="Pesquisar: remédio ou sintomas."-->
+				<select>
+					<option>Nome do Remédio</option>
+					<option>novalgina</option>
+					<option>paracetamol</option>
+				</select>
+
+				<select>
+					<option>Sintomas</option>
+					<option>dor de cabeça</option>
+					<option>febre</option>
+				</select>
+
 				<button><img src="images/search.png"></button>
 			</div>
 
