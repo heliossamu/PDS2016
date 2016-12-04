@@ -41,6 +41,10 @@
 			$facebookid = $user['id']; //importante!! será usado no js/first.js
 			$username = $user['name'];
 
+			/*
+			PROBLEMA ESTA AQUI - nao consigo receber os id dos amigos
+			pedir para alguem se cadastrar no site
+
 			try {
 				// Returns a `Facebook\FacebookResponse` object
 				$response = $fb->get('/me?friends', $accessToken);
@@ -55,6 +59,7 @@
 
 			$friends = $response->getGraphNode();
 			echo $friends['uid'];
+			*/
 
 			echo "<input type='hidden' name='facebookid' id='facebookid' value='".$facebookid."'>";
 
