@@ -131,8 +131,42 @@ function filter(){
 
 	alert(remedio + " - " + sintomas);
 	clear();
-
 	//pego apenas as pessoas com os remedios desejados utilizando o filtro
+
+	var ajax = $.ajax({
+		url: 'action/carregarPessoaFiltroAction.php',
+		type: 'POST',
+		async: true,
+		data: {facebookid: facebookid, remedio: remedio, sintomas: sintomas},
+		//data: $("#cadastro_remedio").serialize(),
+		success: function (data) {
+        	$.each($.parseJSON(data), function() {
+        		var pessoaid = this.pessoaid;
+
+		        var marker = new google.maps.Marker({
+	                position: new google.maps.LatLng(this.lat, this.lng),
+	                title: 'ue: ' + this.pessoaid,
+	                map: map
+	            });
+
+	            marker.addListener('click', function() {
+				    //alert('ueueue: ' + pessoaid);
+				    checkMedicine(pessoaid, remedio, sintomas)
+				    
+				});
+
+				markers.push(marker);
+		    });
+			
+    	},
+
+		error: function (xhr, ajaxOptions, thrownError) {
+	        alert(xhr.status);
+	        alert(thrownError);
+      	}
+	});
+
+
 
 	//depois ao abrir para checar os remedios, preciso utilizar os filtros também
 
