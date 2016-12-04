@@ -25,14 +25,7 @@ function addMedicine(){
 
 function checkMedicine(pessoaid, nomeremedio, sintomas){
 
-    var sendData = '?pessoaid='+pessoaid;
-    if(nomeremedio != ""){
-        sendData = sendData + '&nomeremedio='+ nomeremedio;
-    }
-
-    if(sintomas != ""){
-        sendaData = sendData + '&sintomas='+ sintomas; 
-    }
+    var sendData = '?pessoaid='+pessoaid+'&nomeremedio='+nomeremedio+"&sintomas="+sintomas;
     //var sendData = '?lat='+lat+'&lng='+lng;
 
     $.fancybox({
