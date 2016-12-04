@@ -2,6 +2,7 @@ var map;
 var facebookid = $("#facebookid").val();
 var lat;
 var lng;
+var markers = [];
 
 function addMedicine(){
     var sendData = '?facebookid='+facebookid;

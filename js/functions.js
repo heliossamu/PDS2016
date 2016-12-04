@@ -84,6 +84,8 @@ function loadMarkers(){
 				    checkMedicine(pessoaid, "", "")
 				    
 				});
+
+				markers.push(marker);
 		    });
 			
     	},
@@ -113,6 +115,13 @@ function loadMedicine(pessoaid){
     });
 }
 
+
+function clearMarkers(){
+	for (var i = 0; i < markers.length; i++) {
+    	markers[i].setMapOnAll(null);
+    	markers = [];
+  	}
+}
 
 //vai filtras as pessoas e adicionar novos marcadores
 function filter(){
