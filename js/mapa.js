@@ -22,7 +22,7 @@ function addMedicine(){
 	});
 }
 
-function checkMedicine(pessoaid){
+function checkMedicine(pessoaid, nomeremedio, sintomas){
     var sendData = '?pessoaid='+pessoaid;
     //var sendData = '?lat='+lat+'&lng='+lng;
 

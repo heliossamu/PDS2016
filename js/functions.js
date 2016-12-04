@@ -72,9 +72,6 @@ function loadMarkers(){
 		success: function (data) {
         	$.each($.parseJSON(data), function() {
         		var pessoaid = this.pessoaid;
-        		var nomeremedio = $("#nomeremedio").val();
-        		var sintomas = $("#sintomas").val();
-        		alert(nomeremedio + " - " + sintomas);
 
 		        var marker = new google.maps.Marker({
 	                position: new google.maps.LatLng(this.lat, this.lng),
@@ -84,7 +81,7 @@ function loadMarkers(){
 
 	            marker.addListener('click', function() {
 				    //alert('ueueue: ' + pessoaid);
-				    checkMedicine(pessoaid)
+				    checkMedicine(pessoaid, "", "")
 				    
 				});
 		    });
