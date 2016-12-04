@@ -62,6 +62,8 @@ try {
 $approvalUrl = $payment->getApprovalLink();
  ResultPrinter::printResult("Created Payment Using PayPal. Please visit the URL to Approve.", "Payment", "<a href='$approvalUrl' >$approvalUrl</a>", $request, $payment);
 
-echo $payment;
+//echo $payment;
 
+
+ echo "ue";
 ?>
