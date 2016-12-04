@@ -116,7 +116,10 @@ function loadMedicine(pessoaid){
 
 function filter(){
 
-	alert('teste');
+	var remedio = $("#nomeremedio").val();
+	var sintomas = $("#sintomas").val();
+
+	alert(remedio + " - " + sintomas);
 
 }
 
