@@ -80,7 +80,7 @@
 					
 					$query = "SELECT nome FROM nome_remedio;";
 
-					echo "<select id='nomeremedio' name='nomeremedio' value='' style='padding: 4px; transform:translate(0, -1px);'>";
+					echo "<select id='nomeremedio' name='nomeremedio' value='' style='padding: 4px; transform:translate(0, -1px); margin-right: 10px'>";
 					echo "<option selected='selected'>Nome do Remédio</option>";
 					$res = pg_query($conexao, $query);
 					if(pg_num_rows($res) > 0){
