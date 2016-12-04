@@ -75,12 +75,27 @@
 			<div id="find-medicine-div">
 				<input type="text" id="search_address" value="" style="width: 300px; margin-right: 20px"/>
 
-				<!--input type="text" placeholder="Pesquisar: remédio ou sintomas."-->
-				<select id='nomeremedio' name='nomeremedio' value='' style='padding: 4px; transform:translate(0, -1px);'>
-					<option selected='selected'>Nome do Remédio</option>
-					<option>novalgina</option>
-					<option>paracetamol</option>
-				</select>
+				<?php
+					include 'conexao.php';
+					
+					$query = "SELECT nome FROM nome_remedio;";
+
+					echo "<select id='nomeremedio' name='nomeremedio' value='' style='padding: 4px; transform:translate(0, -1px);'>";
+					echo "<option selected='selected'>Nome do Remédio</option>";
+					$res = pg_query($conexao, $query);
+					if(pg_num_rows($res) > 0){
+						while($row = pg_fetch_array($res)){
+							echo "<option>". $row['nome'] ."</option>";
+						}
+					}
+					echo "</select>";
+
+					pg_close($conexao);
+				?>
+
+
+
+				
 
 				<select id='sintomas' name='sintomas' value='' style='padding: 4px; transform:translate(0, -1px);'>
 					<option>Sintomas</option>
