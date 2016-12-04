@@ -41,9 +41,17 @@
 			$facebookid = $user['id']; //importante!! será usado no js/first.js
 			$username = $user['name'];
 
-			$friends = $fb->api('/me/friends');
-			echo $friends;
+			//$friends = $fb->api('/me/friends');
+			//echo $friends;
 
+			$request = new FacebookRequest(
+			  $session,
+			  'GET',
+			  '/'. $facebookid .'/friends'
+			);
+			$response = $request->execute();
+			$graphObject = $response->getGraphObject();
+			
 			echo "<input type='hidden' name='facebookid' id='facebookid' value='".$facebookid."'>";
 
 		?>
