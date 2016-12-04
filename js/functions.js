@@ -114,3 +114,9 @@ function loadMedicine(pessoaid){
 }
 
 
+function filter(){
+
+	alert('teste');
+
+}
+

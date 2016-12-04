@@ -100,12 +100,12 @@
 							echo "<option>". $row['nome'] ."</option>";
 						}
 					}
-					echo "</select>";	
+					echo "</select>";
 
 					pg_close($conexao);
 				?>
 
-				<button onclick='alert("teste")'><img src="images/search.png"></button>
+				<button onclick='filter()'><img src="images/search.png"></button>
 			</div>
 
 			<div><a href="index.php" onclick="FB.logout();">Sair</a></div>
