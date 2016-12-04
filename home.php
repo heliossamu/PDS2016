@@ -76,13 +76,13 @@
 				<input type="text" id="search_address" value="" style="width: 300px; margin-right: 20px"/>
 
 				<!--input type="text" placeholder="Pesquisar: remédio ou sintomas."-->
-				<select>
-					<option>Nome do Remédio</option>
+				<select id='nomeremedio' name='nomeremedio' value=''>
+					<option selected='selected'>Nome do Remédio</option>
 					<option>novalgina</option>
 					<option>paracetamol</option>
 				</select>
 
-				<select>
+				<select id='sintomas' name='sintomas'>
 					<option>Sintomas</option>
 					<option>dor de cabeça</option>
 					<option>febre</option>
