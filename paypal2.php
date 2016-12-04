@@ -1,6 +1,6 @@
 <?php
 
-$composerAutoload = dirname(dirname(dirname(__DIR__))) . '/paypal/autoload.php';
+$composerAutoload = dirname(dirname(dirname(__DIR__))) . 'paypal/autoload.php';
 require $composerAutoload;
 
 use PayPal\Api\Amount;
