@@ -46,14 +46,12 @@
 
 						//echo "<div id='comprar-button'>Comprar</div>";
 
-						echo '<div style='margin-left: 100px;'>';
 						echo '<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">';
 						echo '<input type="hidden" name="cmd" value="_s-xclick">';
 						echo '<input type="hidden" name="hosted_button_id" value="X6WV5KFKMT4T8">';
 						echo '<input type="image" src="https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - A maneira fácil e segura de enviar pagamentos online!">';
 						echo '<img alt="" border="0" src="https://www.paypalobjects.com/pt_BR/i/scr/pixel.gif" width="1" height="1">';
 						echo '</form>';
-						echo '</div>'
 					echo "</div>";
 					echo "<br>";
 				}
