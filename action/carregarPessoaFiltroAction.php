@@ -11,7 +11,7 @@
 		$remedio = $_POST['remedio'];
 	}
 
-	if(isset($_POST['remedio']) && !empty($_POST['remedio'])){
+	if(isset($_POST['sintomas']) && !empty($_POST['sintomas'])){
 		$sintomas = $_POST['sintomas'];	
 	}
 
