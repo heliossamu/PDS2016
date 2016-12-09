@@ -20,7 +20,7 @@
 	$json = "";
 	$json .= '{';
 	$json .= '"pessoaid":' . $pessoaid . ", ";
-	$json .= '"nome":' . $nome;
+	$json .= '"nome": "' . $nome . '"';
 	$json .= '}';
 	echo $json;
 	pg_close($conexao);
