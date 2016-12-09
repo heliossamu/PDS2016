@@ -67,8 +67,9 @@ function checkMyMedicine(){
     });
 
     alert(username);
+    alert(pid);
 
-
+    /*
     var ajax = $.ajax({
         url: 'action/carregarTudoPessoaAction.php',
         type: 'POST',
@@ -118,7 +119,7 @@ function checkMyMedicine(){
         'title': 'Meus remedios',
         'href': 'verificar_meus_remedios.php'+sendData,
     });
-
+    */
 
 }
 

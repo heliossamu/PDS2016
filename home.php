@@ -57,7 +57,7 @@
 			    exit;
 			}
 
-			print_r($graphObject);
+			//print_r($graphObject);
 
 
 
