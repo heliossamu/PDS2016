@@ -47,8 +47,8 @@
 
 			try {
 				// Returns a `Facebook\FacebookResponse` object
-				$request = $fb->get('/me?friends&fields=id,name', $accessToken);
-				$response = $request->getGraphEdge()->asArray;
+				$response = $fb->get('/me?friends&fields=id,name', $accessToken);
+				
 			} catch(Facebook\Exceptions\FacebookResponseException $e) {
 			    echo 'Graph returned an error: ' . $e->getMessage();
 			    exit;
