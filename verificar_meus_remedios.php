@@ -10,6 +10,7 @@
 	</head>
 	<body>
 		<?php 
+			echo "<h3>". $GET['nome'] ."</h3>";
 			echo "<input type='hidden' id='pessoaid' name='pessoaid' value='".$_GET['pessoaid']."'>";
 			
 			include 'conexao.php';
