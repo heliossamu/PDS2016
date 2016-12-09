@@ -81,6 +81,7 @@
 				$facebookid = $user['id']; //importante!! será usado no js/first.js
 				echo $facebookid;
 
+				echo "<input type='hidden' id='username' name='username' value='".$user['name']."'>";
 				echo "<input type='hidden' id='facebookid' name='facebookid' value='".$facebookid."'>";
 			}
 		?>

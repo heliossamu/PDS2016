@@ -2,6 +2,7 @@
 var lat;
 var lng;
 var facebookid;
+var username;
 
 //esta funcao sempre é chamada durante a inicializacao da pagina
 //carrega o autocomplete do input de endereco.
@@ -49,6 +50,7 @@ function checkFacebookId(){
 //funcao que trata o evento de clickar no botao confirmar da pagina first.php
 function confirmButton(){
 	var address = $("#endereco").val();
+	username = $("#username").val();
 	if(!address || address.length == 0){
 		alert("Informe um endereco!");
 	}else{
@@ -63,7 +65,7 @@ function insertPerson(){
 		url: 'action/cadastrarPessoaAction.php',
 		type: 'POST',
 		async: true,
-		data: {facebookid: facebookid, lat: lat, lng: lng},
+		data: {facebookid: facebookid, lat: lat, lng: lng, username: username},
 		success: function (data) {
 			//redireciona para a home
         	$(location).attr('href', '../home.php')

@@ -9,11 +9,12 @@
 	*/
 	$lat = $_POST['lat'];
 	$lng = $_POST['lng'];
+	$username = $_POST['username'];
 	$facebookid = $_POST['facebookid'];
 	
 	//query para contar a qtde de tuplas com o id recebido
-	$query = "INSERT INTO pessoa(facebookid, lat, lng) VALUES(". $facebookid .", 
-		".$lat.", ".$lng.")";
+	$query = "INSERT INTO pessoa(facebookid, lat, lng, nome) VALUES(". $facebookid .", 
+		".$lat.", ".$lng.", '".$username."')";
 	
 	$result = pg_query($conexao, $query);
 	/* Retorna 1 em caso de sucesso ou 0, caso contrário*/
