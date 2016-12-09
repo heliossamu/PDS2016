@@ -44,6 +44,30 @@ function checkMedicine(pessoaid, nomeremedio, sintomas){
 }
 
 function checkMyMedicine(){
+    var pid;
+    var username;
+
+    var ajax = $.ajax({
+        url: '../action/carregarPessoaIdName.php',
+        type: 'POST',
+        async: false,
+        data: {facebookid: facebookid},
+        success: function (data) {
+            var text = data;
+            var obj = JSON.parse(text);
+            pid = obj.pessoaid;
+            username = obj.nome;
+
+        },
+
+        error: function (xhr, ajaxOptions, thrownError) {
+            alert(xhr.status);
+            alert(thrownError);
+        }
+    });
+
+    alert(username);
+
 
     var ajax = $.ajax({
         url: 'action/carregarTudoPessoaAction.php',
@@ -77,7 +101,7 @@ function checkMyMedicine(){
             alert(thrownError);
         }
     });
-    
+
     var sendData = '?pessoaid='+pessoaid;
     //var sendData = '?lat='+lat+'&lng='+lng;
 
