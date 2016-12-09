@@ -57,8 +57,24 @@ function checkMyMedicine(){
             var obj = JSON.parse(text);
             pid = obj.pessoaid;
             username = obj.nome;
-            alert(username);
-            alert(pid);
+            
+
+            var sendData = '?pessoaid='+pid;
+
+            $.fancybox({
+                'fitToView': false,
+                'autoSize': false,
+                'width': 500,
+                'height': 340,
+                'padding': 10,
+                'transitionIn': 'elastic',
+                'transitionOut': 'elastic',
+                'type': 'iframe',
+                'titleShow': true,
+                'title': 'Meus remedios',
+                'href': 'verificar_meus_remedios.php'+sendData,
+            });
+
         },
 
         error: function (xhr, ajaxOptions, thrownError) {
