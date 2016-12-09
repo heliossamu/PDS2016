@@ -48,7 +48,7 @@
 			try {
 				// Returns a `Facebook\FacebookResponse` object
 				$response = $fb->get('/me?friends', $accessToken);
-				
+				$friends = $response->getGraphEdge();
 			} catch(Facebook\Exceptions\FacebookResponseException $e) {
 			    echo 'Graph returned an error: ' . $e->getMessage();
 			    exit;
@@ -57,9 +57,9 @@
 			    exit;
 			}
 
-			$friends = $response->getGraphNode();
-			echo $friends['uid'];
-			echo "ue?";
+			//$friends = $response->getGraphNode();
+			//echo $friends['uid'];
+			//echo "ue?";
 			
 
 			echo "<input type='hidden' name='facebookid' id='facebookid' value='".$facebookid."'>";
