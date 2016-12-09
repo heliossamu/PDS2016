@@ -10,7 +10,6 @@
 	</head>
 	<body>
 		<?php 
-			echo "<h3>". $GET['nome'] ."</h3>";
 			echo "<input type='hidden' id='pessoaid' name='pessoaid' value='".$_GET['pessoaid']."'>";
 			
 			include 'conexao.php';
@@ -26,6 +25,18 @@
 			if(isset($_GET['sintomas']) && !empty($_GET['sintomas'])){
 				$sintomas = $_GET['sintomas'];
 			}
+
+			
+			$query = "SELECT nome FROM pessoa WHERE pessoaid = ". $pessoaid ." ";
+			$res = pg_query($conexao, $query);
+			if(pg_num_rows($res) > 0){
+				while($row = pg_fetch_array($res)){
+					echo "<h3>". $row['nome'] ."</h3>";
+				}
+			}
+
+
+
 
 			$query = "SELECT * FROM remedio WHERE pessoaid = " . $pessoaid . " ";
 			if(!empty($nomeremedio) || !empty($sintomas)){
