@@ -59,7 +59,7 @@ function checkMyMedicine(){
             username = obj.nome;
             
 
-            var sendData = '?pessoaid='+pid+'&nome='+username;
+            var sendData = '?pessoaid='+pid;
 
             $.fancybox({
                 'fitToView': false,
