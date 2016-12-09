@@ -85,7 +85,7 @@
 			}
 		?>
 
-		<script src="js/first.js"></script>
+		
 		
 		<div class="menu">
 			<div id="logo-div">
@@ -119,7 +119,7 @@
 		<!-- Maps API Javascript -->
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJY_wjIELj_UP7FULQdkEsrRFsuoPipdI&sensor=false&libraries=places"></script>
         
-        
+        <script src="js/first.js"></script>
 
 	</body>
 </html>
