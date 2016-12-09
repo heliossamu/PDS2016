@@ -59,6 +59,7 @@
 
 			$friends = $response->getGraphNode();
 			echo $friends['uid'];
+			echo "ue?";
 			
 
 			echo "<input type='hidden' name='facebookid' id='facebookid' value='".$facebookid."'>";
