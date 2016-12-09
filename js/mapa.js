@@ -43,6 +43,27 @@ function checkMedicine(pessoaid, nomeremedio, sintomas){
     });
 }
 
+function checkMyMedicine(pessoaid){
+    var sendData = '?pessoaid='+pessoaid;
+    //var sendData = '?lat='+lat+'&lng='+lng;
+
+    $.fancybox({
+        'fitToView': false,
+        'autoSize': false,
+        'width': 500,
+        'height': 340,
+        'padding': 10,
+        'transitionIn': 'elastic',
+        'transitionOut': 'elastic',
+        'type': 'iframe',
+        'titleShow': true,
+        'title': 'Meus remedios',
+        'href': 'verificar_meus_remedios.php'+sendData,
+    });
+
+
+}
+
 
 
 function initialize(){
@@ -75,6 +96,9 @@ function initialize(){
         title: 'Sua posição'
     });
 
+    marker.addListener('click', function() {
+        checkMyMedicine(facebookid);
+    });
 
 	var input = (document.getElementById('search_address'));
     var autocomplete = new google.maps.places.Autocomplete(input);
