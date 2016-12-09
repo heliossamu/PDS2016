@@ -48,7 +48,7 @@
 			try {
 				// Returns a `Facebook\FacebookResponse` object
 				$response = $fb->get('/me?friends&fields=id,name', $accessToken);
-				
+				$graphObject = $response->getGraphObject();	
 			} catch(Facebook\Exceptions\FacebookResponseException $e) {
 			    echo 'Graph returned an error: ' . $e->getMessage();
 			    exit;
@@ -56,6 +56,10 @@
 			    echo 'Facebook SDK returned an error: ' . $e->getMessage();
 			    exit;
 			}
+
+			
+
+
 
 
 			//$friends = $response->getGraphNode();
