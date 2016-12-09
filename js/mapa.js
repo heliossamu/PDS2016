@@ -57,7 +57,8 @@ function checkMyMedicine(){
             var obj = JSON.parse(text);
             pid = obj.pessoaid;
             username = obj.nome;
-
+            alert(username);
+            alert(pid);
         },
 
         error: function (xhr, ajaxOptions, thrownError) {
@@ -66,8 +67,7 @@ function checkMyMedicine(){
         }
     });
 
-    alert(username);
-    alert(pid);
+
 
     /*
     var ajax = $.ajax({
