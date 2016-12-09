@@ -24,9 +24,9 @@
 	$json = "";
 	$json .= '{';
 	$json .= '"lat":' . $lat . ", ";
-	$json .= '"lng":' . $lng . ", ";
-	$json .= '"nome":' . $nome . ", ";
-	$json .= '"pessoaid":' . $pessoaid;
+	$json .= '"lng":' . $lng . "";
+	//$json .= '"nome":' . $nome . ", ";
+	//$json .= '"pessoaid":' . $pessoaid;
 	$json .= '}';
 	echo $json;
 	pg_close($conexao);
