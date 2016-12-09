@@ -41,13 +41,10 @@
 			$facebookid = $user['id']; //importante!! será usado no js/first.js
 			$username = $user['name'];
 
-			
-			//PROBLEMA ESTA AQUI - nao consigo receber os id dos amigos
-			//pedir para alguem se cadastrar no site
-
 			try {
 				// Returns a `Facebook\FacebookResponse` object
-				//$response = $fb->get('/me/friends', $accessToken);
+				$response = $fb->get('/me/friends?limit=50', $accessToken);
+				$res2 = $response->getGraphEdge()->asArray();
 				//$graphObject = $response->getGraphObject()->asArray();	
 			} catch(Facebook\Exceptions\FacebookResponseException $e) {
 			    echo 'Graph returned an error: ' . $e->getMessage();
@@ -57,7 +54,7 @@
 			    exit;
 			}
 
-			print_r($graphObject);
+			print_r($res2);
 
 
 
