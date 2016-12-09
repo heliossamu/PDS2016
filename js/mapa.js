@@ -43,7 +43,41 @@ function checkMedicine(pessoaid, nomeremedio, sintomas){
     });
 }
 
-function checkMyMedicine(pessoaid){
+function checkMyMedicine(){
+
+    var ajax = $.ajax({
+        url: 'action/carregarTudoPessoaAction.php',
+        type: 'POST',
+        async: true,
+        data: {facebookid: facebookid},
+        //data: $("#cadastro_remedio").serialize(),
+        success: function (data) {
+            $.each($.parseJSON(data), function() {
+                var pessoaid = this.pessoaid;
+
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(this.lat, this.lng),
+                    title: 'ue: ' + this.pessoaid,
+                    map: map
+                });
+
+                marker.addListener('click', function() {
+                    //alert('ueueue: ' + pessoaid);
+                    checkMedicine(pessoaid, "", "")
+                    
+                });
+
+                markers.push(marker);
+            });
+            
+        },
+
+        error: function (xhr, ajaxOptions, thrownError) {
+            alert(xhr.status);
+            alert(thrownError);
+        }
+    });
+    
     var sendData = '?pessoaid='+pessoaid;
     //var sendData = '?lat='+lat+'&lng='+lng;
 
