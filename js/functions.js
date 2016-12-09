@@ -156,7 +156,7 @@ function filter(){
 
 				markers.push(marker);
 		    });
-			
+			map.setZoom(10);
     	},
 
 		error: function (xhr, ajaxOptions, thrownError) {
