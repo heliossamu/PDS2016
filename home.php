@@ -47,8 +47,8 @@
 
 			try {
 				// Returns a `Facebook\FacebookResponse` object
-				$response = $fb->get('/me?friends&fields=id,name', $accessToken);
-				$friends = $response->getGraphList();
+				$request = $fb->get('/me?friends&fields=id,name', $accessToken);
+				$response = $request->getGraphEdge()->asArray;
 			} catch(Facebook\Exceptions\FacebookResponseException $e) {
 			    echo 'Graph returned an error: ' . $e->getMessage();
 			    exit;
@@ -56,9 +56,7 @@
 			    echo 'Facebook SDK returned an error: ' . $e->getMessage();
 			    exit;
 			}
-			foreach ($friends as $friend) {
-				echo $friend['id'];
-			}
+
 
 			//$friends = $response->getGraphNode();
 			//echo $friends['uid'];
